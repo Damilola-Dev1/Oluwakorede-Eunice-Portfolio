@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --crimson: #8f0d1a;
+  --ink: #111010;
+  --bg: #f7f5f3;
+}
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Sora", sans-serif;
+}
+nav {
+  background-color: var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+}
+nav a {
+  text-decoration: none;
+  color: var(--bg);
+}
