@@ -14,17 +14,36 @@ body {
   font-family: "Sora", sans-serif;
 }
 nav {
-  background-color: var(--crimson);
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ink);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-logo {
+  font-family: "Lora", serif;
+  color: var(--crimson);
+  text-decoration: none;
+  font-weight: 600;
+}
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  margin: 0 auto;
-  width: 100%;
   position: fixed;
-  top: 0%;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--bg);
+  padding: 10px;
 }
-nav a {
-  text-decoration: none;
-  color: var(--bg);
+main {
+  padding-top: 80px;
 }
