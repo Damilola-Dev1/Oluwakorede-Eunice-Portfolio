@@ -7,6 +7,9 @@
   --crimson: #8f0d1a;
   --ink: #111010;
   --bg: #f7f5f3;
+  --crimson-deep: #6b0a14;
+  --muted: #6b6464;
+  --warm-white: #f2ece8;
 }
 body {
   background-color: var(--bg);
@@ -44,6 +47,61 @@ header {
   background-color: var(--bg);
   padding: 10px;
 }
-main {
+
+.hero {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0 60px;
+  gap: 40px;
+}
+.hero-left {
+  flex: 1;
+  align-items: flex-start;
   padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hero-right {
+  padding: 30px;
+  flex: 1;
+  align-self: stretch;
+  background-color: var(--warm-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero h1 {
+  font-family: "Lora", serif;
+  font-size: 2.2rem;
+}
+.hero-left p:first-child {
+  font-size: 0.75rem;
+  color: var(--crimson);
+  letter-spacing: 0.15em;
+}
+.first-btn {
+  text-decoration: none;
+  background-color: var(--crimson-deep);
+  padding: 12px 28px;
+  color: var(--bg);
+  border: 2px solid var(--crimson);
+  border-radius: 4px;
+  display: inline-block;
+}
+.second-btn {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--muted);
+  border: 2px solid var(--crimson);
+  padding: 12px 28px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.hero-button {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
 }
