@@ -105,3 +105,9 @@ header {
   gap: 12px;
   margin-top: 24px;
 }
+.stats {
+  background-color: var(--ink);
+  display: flex;
+  justify-content: space-around;
+  padding: 32px 60px;
+}
