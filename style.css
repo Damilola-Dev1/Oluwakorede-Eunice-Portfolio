@@ -124,3 +124,52 @@ header {
 .stats div {
   text-align: center;
 }
+.about {
+  display: flex;
+  padding: 80px 60px;
+}
+
+.about h2 {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+}
+
+.about-left {
+  flex: 1;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  justify-content: center;
+}
+.about-right {
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--light-muted);
+  line-height: 2;
+}
+.about-right p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.section-label {
+  font-size: 0.9rem;
+  color: var(--crimson);
+  letter-spacing: 0.15em;
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.pills span {
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 5px;
+  font-size: 0.7rem;
+}
