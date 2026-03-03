@@ -10,6 +10,7 @@
   --crimson-deep: #6b0a14;
   --muted: #6b6464;
   --warm-white: #f2ece8;
+  --light-muted: #b8afaf;
 }
 body {
   background-color: var(--bg);
@@ -106,8 +107,20 @@ header {
   margin-top: 24px;
 }
 .stats {
-  background-color: var(--ink);
+  background-color: var(--crimson-deep);
   display: flex;
   justify-content: space-around;
   padding: 32px 60px;
+}
+.stats span {
+  font-size: 3rem;
+  color: var(--warm-white);
+  font-family: "Lora", serif;
+}
+.stats p {
+  color: var(--light-mutedmuted);
+  font-size: 0.75rem;
+}
+.stats div {
+  text-align: center;
 }
