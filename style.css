@@ -318,3 +318,95 @@ work h2 {
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 80px 60px;
+  background: var(--warm-white);
+}
+.left-contact h2 {
+  font-family: Lora;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+.left-contact p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.social-links a {
+  text-decoration: none;
+  color: var(--crimson);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+input,
+textarea {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  outline: none;
+  background: white;
+}
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+button {
+  background: var(--crimson);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+footer {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 32px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer span {
+  font-family: Lora;
+  font-size: 1.2rem;
+  color: var(--crimson);
+}
+footer p {
+  font-size: 0.75rem;
+  color: var(--light-muted);
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--light-muted);
+  font-size: 0.8rem;
+}
