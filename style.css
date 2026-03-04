@@ -48,7 +48,18 @@ header {
   background-color: var(--bg);
   padding: 10px;
 }
-
+nav a:hover {
+  color: var(--crimson);
+}
+.nav-cta {
+  background: var(--crimson);
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+.nav-cta:hover {
+  background: var(--crimson-deep);
+}
 .hero {
   display: flex;
   min-height: 100vh;
@@ -65,6 +76,10 @@ header {
   align-items: flex-start;
   justify-content: center;
 }
+.highlight {
+  color: var(--crimson);
+  font-style: italic;
+}
 .hero-right {
   padding: 30px;
   flex: 1;
@@ -73,15 +88,39 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
+.hero-right blockquote {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: Lora;
+}
+.hero-right::before {
+  content: '"';
+  font-family: "Lora", serif;
+  font-size: 8rem;
+  color: var(--crimson);
+  opacity: 0.2;
+  display: block;
+  line-height: 1;
+}
+
 .hero h1 {
   font-family: "Lora", serif;
-  font-size: 2.2rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 .hero-left p:first-child {
   font-size: 0.75rem;
   color: var(--crimson);
   letter-spacing: 0.15em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .first-btn {
   text-decoration: none;
@@ -118,7 +157,7 @@ header {
   font-family: "Lora", serif;
 }
 .stats p {
-  color: var(--light-mutedmuted);
+  color: var(--light-muted);
   font-size: 0.75rem;
 }
 .stats div {
@@ -230,13 +269,25 @@ header {
   gap: 24px;
   align-items: start;
 }
-work h2 {
+.work-header {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+.work-card {
+  background: var(--warm-white);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.work h2 {
   font-family: Lora;
   font-size: 2.5rem;
 }
+
 .work .section-label {
   margin-bottom: 8px;
 }
+
 .left-work {
   padding: 40px;
   border-radius: 8px;
@@ -259,6 +310,7 @@ work h2 {
   color: var(--ink);
   display: block;
   margin-bottom: 8px;
+  display: block;
 }
 .left-work h3,
 .work-card h3 {
@@ -278,6 +330,9 @@ work h2 {
   padding: 80px 60px;
   background: var(--bg);
 }
+.testimonials .highlight {
+  color: var(--crimson-deep);
+}
 .testimonials .section-label {
   margin-bottom: 8px;
   display: block;
@@ -287,10 +342,12 @@ work h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
-.client-card {
+.client-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+.client-card {
   background-color: var(--warm-white);
   padding: 32px;
   border-radius: 8px;
