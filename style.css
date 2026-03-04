@@ -185,11 +185,14 @@ header {
   margin-bottom: 20px;
 }
 .services-header h2 {
+  font-size: 3rem;
   color: var(--bg);
 }
 .service-card {
+  border-top: 2px solid var(--crimson);
   background-color: #1a1010;
   padding: 32px 24px;
+  min-height: 200px;
 }
 .service-number {
   /* large decorative number */
@@ -197,7 +200,10 @@ header {
   color: var(--crimson-deep);
   font-family: "Lora", serif;
 }
-
+.services-header .real {
+  color: var(--crimson);
+  font-style: italic;
+}
 .service-card h3 {
   /* card title */
   color: var(--bg);
@@ -214,4 +220,57 @@ header {
   font-size: 0.9rem;
   color: var(--crimson);
   letter-spacing: 0.15em;
+  border-left: 3px solid var(--crimson);
+  padding-left: 8px;
+}
+.work {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 80px 10%;
+  gap: 24px;
+  align-items: start;
+}
+work h2 {
+  font-family: Lora;
+  font-size: 2.5rem;
+}
+.work .section-label {
+  margin-bottom: 8px;
+}
+.left-work {
+  padding: 40px;
+  border-radius: 8px;
+  background: var(--warm-white);
+}
+.right-work {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.work-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.15rem;
+  color: var(--crimson);
+  text-transform: uppercase;
+}
+.work-client {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 8px;
+}
+.left-work h3,
+.work-card h3 {
+  font-family: Lora;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.left-work p,
+.work-card p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
 }
