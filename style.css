@@ -173,3 +173,45 @@ header {
   padding: 5px;
   font-size: 0.7rem;
 }
+.services {
+  display: grid;
+  background-color: var(--ink);
+  padding: 80px 60px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.services-header {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+.services-header h2 {
+  color: var(--bg);
+}
+.service-card {
+  background-color: #1a1010;
+  padding: 32px 24px;
+}
+.service-number {
+  /* large decorative number */
+  font-size: 2rem;
+  color: var(--crimson-deep);
+  font-family: "Lora", serif;
+}
+
+.service-card h3 {
+  /* card title */
+  color: var(--bg);
+  font-family: "Lora", serif;
+  padding: 10px;
+}
+
+.service-card p {
+  /* card description */
+  color: var(--light-muted);
+  font-size: 0.8rem;
+}
+.services .description {
+  font-size: 0.9rem;
+  color: var(--crimson);
+  letter-spacing: 0.15em;
+}
