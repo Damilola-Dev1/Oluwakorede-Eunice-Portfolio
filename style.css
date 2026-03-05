@@ -196,7 +196,7 @@ nav a:hover {
 
 .about h2 {
   font-family: "Lora", serif;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .about-left {
@@ -207,6 +207,19 @@ nav a:hover {
   padding-top: 20px;
   justify-content: center;
 }
+.about-left .section-label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--crimson);
+}
+.about-left .section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .about-right {
   display: flex;
   padding: 0 20px;
@@ -233,10 +246,10 @@ nav a:hover {
   margin-top: 24px;
 }
 .pills span {
-  border: 1px solid black;
   border-radius: 100px;
-  padding: 5px;
+  padding: 8px 16px;
   font-size: 0.7rem;
+  border: 1px solid var(--muted);
 }
 .services {
   display: grid;
