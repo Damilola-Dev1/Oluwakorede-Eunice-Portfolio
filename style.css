@@ -63,7 +63,7 @@ nav a:hover {
 .hero {
   display: flex;
   min-height: 100vh;
-  align-items: center;
+  align-items: stretch;
   padding: 0 60px;
   gap: 40px;
 }
@@ -76,6 +76,14 @@ nav a:hover {
   align-items: flex-start;
   justify-content: center;
 }
+.hero-left p:first-child::before {
+  content: "";
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background-color: var(--crimson);
+  /* make it a visible line */
+}
 .highlight {
   color: var(--crimson);
   font-style: italic;
@@ -83,18 +91,25 @@ nav a:hover {
 .hero-right {
   padding: 30px;
   flex: 1;
-  align-self: stretch;
   background-color: var(--warm-white);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: "Lora", serif;
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.6;
+  padding-top: 40px;
+  min-height: 100vh;
 }
+.hero-right p {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-style: normal;
+}
+
 .hero-right blockquote {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-style: italic;
   font-family: Lora;
 }
@@ -106,6 +121,17 @@ nav a:hover {
   opacity: 0.2;
   display: block;
   line-height: 1;
+}
+
+.quote-group {
+  margin-top: auto;
+  padding-bottom: 40px;
+}
+.philosophy {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-top: 16px;
 }
 
 .hero h1 {
@@ -466,4 +492,18 @@ footer p {
   text-decoration: none;
   color: var(--light-muted);
   font-size: 0.8rem;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-left {
+  animation: fadeup 0.8s ease-out both;
 }
