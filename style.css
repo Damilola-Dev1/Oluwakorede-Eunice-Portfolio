@@ -266,11 +266,17 @@ nav a:hover {
   font-size: 3rem;
   color: var(--bg);
 }
+
 .service-card {
-  border-top: 2px solid var(--crimson);
   background-color: #1a1010;
   padding: 32px 24px;
   min-height: 200px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.service-card:hover {
+  border-left-color: var(--crimson);
+  background-color: #221515;
 }
 .service-number {
   /* large decorative number */
@@ -316,8 +322,12 @@ nav a:hover {
   background: var(--warm-white);
   padding: 32px;
   border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
-
+.work-card:hover,
+.left-work:hover {
+  background-color: var(--crimson);
+}
 .work h2 {
   font-family: Lora;
   font-size: 2.5rem;
@@ -331,6 +341,7 @@ nav a:hover {
   padding: 40px;
   border-radius: 8px;
   background: var(--warm-white);
+  min-height: 600px;
 }
 .right-work {
   display: flex;
@@ -342,6 +353,11 @@ nav a:hover {
   letter-spacing: 0.15rem;
   color: var(--crimson);
   text-transform: uppercase;
+  display: inline-block;
+  border: 1px solid var(--crimson);
+  border-radius: 100px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
 }
 .work-client {
   font-size: 1rem;
@@ -364,6 +380,14 @@ nav a:hover {
   color: var(--muted);
   font-size: 0.85rem;
   line-height: 1.7;
+}
+.left-work:hover h3,
+.left-work:hover p,
+.left-work:hover .work-client,
+.work-card:hover h3,
+.work-card:hover p,
+.work-card:hover .work-client {
+  color: white;
 }
 .testimonials {
   padding: 80px 60px;
@@ -390,6 +414,22 @@ nav a:hover {
   background-color: var(--warm-white);
   padding: 32px;
   border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  position: relative;
+}
+.client-card::before {
+  content: '"';
+  font-family: "Lora", serif;
+  font-size: 4rem;
+  color: var(--crimson);
+  opacity: 0.2;
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.client-card:hover {
+  border-color: var(--crimson);
 }
 .client-card span {
   color: var(--crimson);
