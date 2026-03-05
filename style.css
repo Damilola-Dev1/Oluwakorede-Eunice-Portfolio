@@ -411,12 +411,13 @@ nav a:hover {
   gap: 24px;
 }
 .client-card {
-  background-color: var(--warm-white);
+  background-color: var(--bg);
   padding: 32px;
   border-radius: 8px;
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
   position: relative;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .client-card::before {
   content: '"';
@@ -444,6 +445,7 @@ nav a:hover {
   line-height: 1.7;
   color: var(--ink);
   margin-bottom: 20px;
+  opacity: 0.4rem;
 }
 .client-name {
   font-weight: 600;
@@ -464,13 +466,27 @@ nav a:hover {
 }
 .left-contact h2 {
   font-family: Lora;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 16px;
+  line-height: 1.2;
+  max-width: 400px;
 }
 .left-contact p {
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 24px;
+}
+.left-contact .section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.left-contact .section-label::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--crimson);
 }
 .social-links {
   display: flex;
@@ -482,6 +498,21 @@ nav a:hover {
   color: var(--crimson);
   font-size: 0.85rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+.social-links a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--crimson);
+}
+.social-links a:hover {
+  color: var(--crimson-deep);
+  transform: translateX(8px);
 }
 
 form {
@@ -497,14 +528,16 @@ label {
 }
 input,
 textarea {
-  border: 1.5px solid #ddd;
-  border-radius: 6px;
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  border-radius: 0;
   padding: 12px;
   font-family: inherit;
   font-size: 0.85rem;
   outline: none;
-  background: white;
+  background: transparent;
 }
+
 textarea {
   min-height: 120px;
   resize: vertical;
@@ -559,4 +592,13 @@ footer p {
 }
 .hero-left {
   animation: fadeup 0.8s ease-out both;
+}
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

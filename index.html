@@ -239,7 +239,11 @@
       <section class="contact">
         <div class="left-contact">
           <span class="section-label">GET IN TOUCH</span>
-          <h2>Let's build something great together.</h2>
+          <h2>
+            Let's build something
+            <span class="highlight">great</span>
+            together.
+          </h2>
           <p>
             Whether you have a project in mind or just want to explore
             possibilities, I'd love to hear from you.
@@ -304,5 +308,19 @@
         </div>
       </footer>
     </main>
+    <script>
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>
