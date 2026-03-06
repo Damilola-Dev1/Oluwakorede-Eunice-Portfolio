@@ -12,6 +12,10 @@
   --warm-white: #f2ece8;
   --light-muted: #b8afaf;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 body {
   background-color: var(--bg);
   color: var(--ink);
@@ -718,6 +722,20 @@ section.visible {
   header {
     padding: 16px 24px;
   }
+
+  .work-card,
+  .left-work {
+    background-color: var(--warm-white);
+  }
+  .work-card h3,
+  .left-work h3,
+  .work-card p,
+  .left-work p,
+  .work-card .work-client,
+  .left-work .work-client {
+    color: var(--ink);
+  }
+
   nav ul {
     gap: 1rem;
   }
@@ -808,5 +826,9 @@ section.visible {
   .second-btn {
     text-align: center;
     width: 100%;
+  }
+  section {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
