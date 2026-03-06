@@ -761,12 +761,19 @@ section.visible {
   .hero h1 {
     font-size: 2rem;
   }
+  nav ul {
+    gap: 0.5rem;
+  }
+  nav a {
+    font-size: 0.7rem;
+  }
+  .nav-cta {
+    padding: 6px 12px;
+  }
   .nav-logo {
     font-size: 1rem;
   }
-  nav a {
-    font-size: 0.75rem;
-  }
+
   .first-btn,
   .second-btn {
     padding: 10px 20px;
@@ -792,5 +799,14 @@ section.visible {
   }
   .stats span {
     font-size: 2rem;
+  }
+  .hero-button {
+    flex-direction: column;
+    width: 100%;
+  }
+  .first-btn,
+  .second-btn {
+    text-align: center;
+    width: 100%;
   }
 }
