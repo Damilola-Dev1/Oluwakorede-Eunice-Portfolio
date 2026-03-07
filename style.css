@@ -26,7 +26,6 @@ nav {
   align-items: center;
   text-transform: uppercase;
 }
-
 nav a {
   text-decoration: none;
   color: var(--ink);
@@ -67,22 +66,23 @@ nav a:hover {
 .nav-cta:hover {
   background: var(--crimson-deep);
 }
+
+/* HERO */
 .hero {
   display: flex;
   min-height: 100vh;
   align-items: stretch;
-  padding: 0 60px;
-  padding-right: 0;
+  padding: 0 60px 0 60px;
   gap: 40px;
 }
 .hero-left {
   flex: 1;
-  align-items: flex-start;
   padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding-left: 20px;
 }
 .hero-left p:first-child::before {
   content: "";
@@ -90,25 +90,32 @@ nav a:hover {
   width: 30px;
   height: 2px;
   background-color: var(--crimson);
-  /* make it a visible line */
 }
 .highlight {
   color: var(--crimson);
   font-style: italic;
 }
 .hero-right {
-  padding: 30px;
   flex: 1;
-  background-color: var(--warm-white);
+  background: linear-gradient(160deg, #e8d5d5 0%, var(--warm-white) 60%);
   display: flex;
   flex-direction: column;
   font-family: "Lora", serif;
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.6;
-  padding-top: 40px;
+  padding: 40px 30px 30px 30px;
   min-height: 100vh;
   margin-right: -60px;
+}
+.hero-right::before {
+  content: '"';
+  font-family: "Lora", serif;
+  font-size: 5rem;
+  color: var(--crimson);
+  opacity: 0.3;
+  display: block;
+  line-height: 1;
 }
 .hero-right p {
   font-size: 0.75rem;
@@ -116,22 +123,12 @@ nav a:hover {
   color: var(--muted);
   font-style: normal;
 }
-
 .hero-right blockquote {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-style: italic;
   font-family: Lora;
+  font-weight: 600;
 }
-.hero-right::before {
-  content: '"';
-  font-family: "Lora", serif;
-  font-size: 8rem;
-  color: var(--crimson);
-  opacity: 0.2;
-  display: block;
-  line-height: 1;
-}
-
 .quote-group {
   margin-top: auto;
   margin-bottom: 60px;
@@ -143,10 +140,9 @@ nav a:hover {
   color: var(--muted);
   margin-top: 16px;
 }
-
 .hero h1 {
   font-family: "Lora", serif;
-  font-size: 4.5rem;
+  font-size: 3.8rem;
   font-weight: 700;
   line-height: 1.1;
 }
@@ -181,6 +177,8 @@ nav a:hover {
   gap: 12px;
   margin-top: 24px;
 }
+
+/* STATS */
 .stats {
   background-color: var(--crimson-deep);
   display: flex;
@@ -199,21 +197,31 @@ nav a:hover {
 .stats div {
   text-align: center;
 }
+
+/* ABOUT */
 .about {
   display: flex;
   padding: 80px 60px;
 }
-
+.about-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 20px 0;
+  object-fit: cover;
+  height: 450px;
+  object-fit: cover;
+  object-position: top;
+}
 .about h2 {
   font-family: "Lora", serif;
   font-size: 3rem;
 }
-
 .about-left {
   flex: 1;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding-top: 20px;
   justify-content: center;
 }
@@ -229,14 +237,12 @@ nav a:hover {
   align-items: center;
   gap: 8px;
 }
-
 .about-right {
   display: flex;
   padding: 0 20px;
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  color: var(--light-muted);
   line-height: 2;
 }
 .about-right p {
@@ -255,18 +261,21 @@ nav a:hover {
   gap: 8px;
   margin-top: 24px;
 }
+.pills span {
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 0.7rem;
+  border: 1px solid var(--muted);
+  transition: all 0.3s ease;
+}
 .pills span:hover {
   background-color: var(--crimson);
   color: white;
   border-color: var(--crimson);
   cursor: pointer;
 }
-.pills span {
-  border-radius: 100px;
-  padding: 8px 16px;
-  font-size: 0.7rem;
-  border: 1px solid var(--muted);
-}
+
+/* SERVICES */
 .services {
   display: grid;
   background-color: var(--ink);
@@ -282,7 +291,6 @@ nav a:hover {
   font-size: 3rem;
   color: var(--bg);
 }
-
 .service-card {
   background-color: #1a1010;
   padding: 32px 24px;
@@ -295,7 +303,6 @@ nav a:hover {
   background-color: #221515;
 }
 .service-number {
-  /* large decorative number */
   font-size: 2rem;
   color: var(--crimson-deep);
   font-family: "Lora", serif;
@@ -305,14 +312,11 @@ nav a:hover {
   font-style: italic;
 }
 .service-card h3 {
-  /* card title */
   color: var(--bg);
   font-family: "Lora", serif;
   padding: 10px;
 }
-
 .service-card p {
-  /* card description */
   color: var(--light-muted);
   font-size: 0.8rem;
 }
@@ -325,7 +329,6 @@ nav a:hover {
   color: var(--crimson);
   gap: 8px;
 }
-
 .services .description::before {
   content: "";
   display: inline-block;
@@ -334,6 +337,7 @@ nav a:hover {
   background-color: var(--crimson);
 }
 
+/* WORK */
 .work {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -361,15 +365,12 @@ nav a:hover {
   font-family: Lora;
   font-size: 2.5rem;
 }
-
-.work .section-label {
-  margin-bottom: 8px;
-}
 .work .section-label,
 .testimonials .section-label {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 8px;
 }
 .work .section-label::before,
 .testimonials .section-label::before {
@@ -379,7 +380,6 @@ nav a:hover {
   height: 2px;
   background-color: var(--crimson);
 }
-
 .left-work {
   padding: 40px;
   border-radius: 8px;
@@ -404,19 +404,16 @@ nav a:hover {
   margin-bottom: 12px;
   transition: all 0.3s ease;
 }
-
 .work-category:hover {
   background-color: var(--crimson);
   color: white;
 }
-
 .work-client {
   font-size: 1rem;
   font-weight: 600;
   color: var(--ink);
   display: block;
   margin-bottom: 8px;
-  display: block;
 }
 .left-work h3,
 .work-card h3 {
@@ -425,7 +422,6 @@ nav a:hover {
   margin-bottom: 12px;
   line-height: 1.2;
 }
-
 .left-work p,
 .work-card p {
   color: var(--muted);
@@ -441,6 +437,7 @@ nav a:hover {
   color: white;
 }
 
+/* TESTIMONIALS */
 .testimonials {
   padding: 80px 60px;
   background: var(--bg);
@@ -456,12 +453,8 @@ nav a:hover {
   line-height: 1;
   margin-bottom: -40px;
 }
-
 .testimonials .highlight {
   color: var(--crimson-deep);
-}
-.testimonials .section-label {
-  margin-bottom: 8px;
 }
 .testimonials h2 {
   font-family: Lora;
@@ -473,7 +466,6 @@ nav a:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
 .client-card {
   background-color: var(--bg);
   padding: 32px;
@@ -482,7 +474,6 @@ nav a:hover {
   transition: border-color 0.3s ease;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
-
 .client-card:hover {
   border-color: var(--crimson);
 }
@@ -510,6 +501,7 @@ nav a:hover {
   color: var(--muted);
 }
 
+/* CONTACT */
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -568,7 +560,6 @@ nav a:hover {
   color: var(--crimson-deep);
   transform: translateX(8px);
 }
-
 form {
   display: flex;
   flex-direction: column;
@@ -586,13 +577,11 @@ textarea {
   border-bottom: 1.5px solid #ddd;
   border-radius: 0;
   padding: 12px;
-  font-family: inherit;
+  font-family: "Sora", sans-serif;
   font-size: 0.85rem;
   outline: none;
   background: transparent;
-  font-family: "Sora", sans-serif;
 }
-
 textarea {
   min-height: 120px;
   resize: vertical;
@@ -601,13 +590,15 @@ button {
   background: var(--crimson);
   color: white;
   border: none;
-  padding: 14px 28px;
+  padding: 14px 40px;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 0.05em;
+  align-self: flex-start;
 }
 
+/* FOOTER */
 footer {
   background: var(--ink);
   color: var(--bg);
@@ -616,10 +607,6 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-.footer-links a:hover {
-  color: var(--crimson);
-}
-
 footer span {
   font-family: Lora;
   font-size: 1.2rem;
@@ -638,7 +625,11 @@ footer p {
   color: var(--light-muted);
   font-size: 0.8rem;
 }
+.footer-links a:hover {
+  color: var(--crimson);
+}
 
+/* ANIMATIONS */
 @keyframes fadeup {
   from {
     opacity: 0;
@@ -652,15 +643,25 @@ footer p {
 .hero-left {
   animation: fadeup 0.8s ease-out both;
 }
-section {
+.about,
+.services,
+.work,
+.testimonials,
+.contact {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-section.visible {
+.about.visible,
+.services.visible,
+.work.visible,
+.testimonials.visible,
+.contact.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* SCROLL ARROW */
 .scroll-arrow {
   position: absolute;
   bottom: 20px;
@@ -677,6 +678,7 @@ section.visible {
   font-size: 0.8rem;
 }
 
+/* TABLET */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -701,6 +703,10 @@ section.visible {
   .about h2 {
     font-size: 2rem;
   }
+  .about-photo {
+    max-width: 100%;
+    height: 300px;
+  }
   .work {
     grid-template-columns: 1fr;
     padding: 60px 40px;
@@ -718,11 +724,23 @@ section.visible {
   }
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   header {
     padding: 16px 24px;
   }
-
+  nav ul {
+    gap: 1rem;
+  }
+  .hero {
+    padding: 80px 24px 40px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero-left {
+    padding-top: 0;
+  }
   .work-card,
   .left-work {
     background-color: var(--warm-white);
@@ -734,16 +752,6 @@ section.visible {
   .work-card .work-client,
   .left-work .work-client {
     color: var(--ink);
-  }
-
-  nav ul {
-    gap: 1rem;
-  }
-  .hero {
-    padding: 80px 24px 40px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
   }
   .services {
     grid-template-columns: 1fr;
@@ -775,9 +783,10 @@ section.visible {
   }
 }
 
+/* SMALL MOBILE */
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   nav ul {
     gap: 0.5rem;
@@ -790,12 +799,6 @@ section.visible {
   }
   .nav-logo {
     font-size: 1rem;
-  }
-
-  .first-btn,
-  .second-btn {
-    padding: 10px 20px;
-    font-size: 0.8rem;
   }
   .about h2 {
     font-size: 1.8rem;
@@ -812,9 +815,6 @@ section.visible {
   .left-contact h2 {
     font-size: 2rem;
   }
-  .client-cards {
-    grid-template-columns: 1fr;
-  }
   .stats span {
     font-size: 2rem;
   }
@@ -827,7 +827,11 @@ section.visible {
     text-align: center;
     width: 100%;
   }
-  section {
+  .about,
+  .services,
+  .work,
+  .testimonials,
+  .contact {
     opacity: 1;
     transform: translateY(0);
   }
